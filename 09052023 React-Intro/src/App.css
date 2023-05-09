@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  min-height: 100vh;
+  background-color: aquamarine;
+}
+
+button {
+  color: white;
+  font-weight: bold;
+  background-color: green;
+  border: none;
+  padding: 8px 12px;
+  margin: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
