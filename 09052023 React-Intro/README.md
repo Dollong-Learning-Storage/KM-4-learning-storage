@@ -18,3 +18,10 @@ Javascript Intermediete
 
 Quote para suhu tentang react, selama belajar, gunakan, atau apapun ttg react. Bisa jadi percikan motivasi
 https://www.telerik.com/kendo-react-ui/react-best-practices-and-productivity-tips/
+
+Tips dari para mastah:
+- https://www.dreamhost.com/blog/learn-react/
+- https://jschris.com/fast-track-your-learning-with-these-12-tips
+- https://dev.to/shaan_alam/how-to-learn-react-the-effective-way-2km7
+
+
