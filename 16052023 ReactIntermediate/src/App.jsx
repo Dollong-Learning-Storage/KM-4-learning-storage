@@ -4,13 +4,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Product from "./pages/Product";
 import ProductDetail from "./pages/Product/ProductDetail";
-
-// const RouteModule = ({ path, element }) => {
-//   if (window.location.href === path) return element;
-// };
+import { useSelector } from "react-redux";
+import TodoList from "./pages/TodoList";
 
 function App() {
-  // useState
+  const state = useSelector((state) => state);
 
   return (
     <div>
@@ -22,6 +20,10 @@ function App() {
           <li>
             <NavLink to="/about">About</NavLink>
           </li>
+          <li>
+            <NavLink to="/product">Product</NavLink>
+          </li>
+          <li>Total CartItem: {state?.length || 0}</li>
         </ul>
       </nav>
 
@@ -29,6 +31,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/product" element={<Product />} />
+        <Route path="/todolist" element={<TodoList />} />
         <Route path="/product/:productId" element={<ProductDetail />} />
       </Routes>
     </div>

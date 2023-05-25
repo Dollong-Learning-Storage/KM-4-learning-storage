@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../styles.css";
+import { useDispatch } from "react-redux";
+import "./style.css";
 
 const ProductDetail = () => {
+  const dispatch = useDispatch();
   const [product, setProduct] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -36,10 +39,13 @@ const ProductDetail = () => {
     <div className="product-container">
       <h1>Skilvul Product</h1>
       <div>
-        <img src={product.image} alt={product.title} />
+        {/* <img src={product.image} alt={product.title} /> */}
         <h2>{product.title}</h2>
         <p>{product.description}</p>
       </div>
+      <button onClick={() => dispatch({ type: "add", product })}>
+        add to cart
+      </button>
     </div>
   );
 };

@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./styles.css";
 
 const Product = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getAPI = async () => {
@@ -30,11 +32,10 @@ const Product = () => {
   return (
     <div className="product-container">
       <h1>Skilvul Product</h1>
+      <br />
+      <br />
       {products?.map((item) => (
-        <button
-          key={item.id}
-          onClick={() => (window.location.href = `product/${item.id}`)}
-        >
+        <button key={item.id} onClick={() => navigate(`/product/${item.id}`)}>
           <h2>{item.title}</h2>
         </button>
       ))}
